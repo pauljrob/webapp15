@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Paul Roberts — Developer. Personal portfolio site." />
+  <title>Paul Roberts — Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav id="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Paul Roberts — home">PR</a>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section id="hero" aria-labelledby="hero-name">
+      <div class="hero-noise" aria-hidden="true"></div>
+      <div class="hero-content">
+        <h1 id="hero-name" class="hero-name">
+          <span class="hero-name-line">PAUL</span>
+          <span class="hero-name-line">ROBERTS</span>
+        </h1>
+        <div class="hero-tagline">
+          <span class="hero-rule" aria-hidden="true"></span>
+          <span class="hero-role">Developer</span>
+        </div>
+        <a href="https://github.com/pauljrob" class="hero-cta" target="_blank" rel="noopener noreferrer">
+          → github.com/pauljrob
+        </a>
+      </div>
+      <p class="hero-scroll-cue" aria-hidden="true">↓ scroll</p>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-heading">
+      <div class="section-inner">
+        <div class="section-label-row">
+          <h2 id="about-heading" class="section-label">About</h2>
+          <span class="section-label-rule" aria-hidden="true"></span>
+        </div>
+        <div class="about-grid">
+          <div class="about-bio">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="about-tags" aria-label="Technologies">
+            <ul class="tag-list" role="list">
+              <li class="tag">JavaScript</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">Node.js</li>
+              <li class="tag">React</li>
+              <li class="tag">Python</li>
+              <li class="tag">Go</li>
+              <li class="tag">SQL</li>
+              <li class="tag">Git</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" aria-labelledby="projects-heading">
+      <div class="section-inner">
+        <div class="section-label-row">
+          <h2 id="projects-heading" class="section-label">Projects</h2>
+          <span class="section-label-rule" aria-hidden="true"></span>
+        </div>
+        <div class="projects-grid" id="projects-grid" aria-label="GitHub repositories">
+          <!-- Cards injected by main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading">
+      <div class="section-inner contact-inner">
+        <h2 id="contact-heading" class="contact-heading">Let's build something.</h2>
+        <ul class="contact-links" role="list">
+          <li>
+            <a href="https://github.com/pauljrob" target="_blank" rel="noopener noreferrer" class="contact-link">
+              → github.com/pauljrob
+            </a>
+          </li>
+          <li>
+            <a href="mailto:paul@example.com" class="contact-link">
+              → paul@example.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© 2024 Paul Roberts</span>
+      <span>Built with GitHub Pages</span>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
