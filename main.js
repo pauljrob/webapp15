@@ -31,11 +31,12 @@ function renderRepos() {
 
   REPOS.forEach((repo, index) => {
     const badgeColor = LANG_COLORS[repo.language] || "#8A8580";
+    const safeUrl = /^https?:\/\//i.test(repo.url) ? repo.url : '#';
     const card = document.createElement("article");
     card.className = "repo-card reveal";
 
     card.innerHTML = `
-      <span class="lang-badge" style="background-color:${badgeColor};">${repo.language}</span>
+      <span class="lang-badge">${escapeHtml(repo.language)}</span>
       <div>
         <h3 class="repo-name">${escapeHtml(repo.name)}</h3>
         <span class="repo-name-rule" aria-hidden="true"></span>
@@ -44,7 +45,7 @@ function renderRepos() {
       <div class="repo-footer">
         <span class="repo-stars">&#9733; ${repo.stars}</span>
         <a
-          href="${escapeHtml(repo.url)}"
+          href="${escapeHtml(safeUrl)}"
           class="repo-link"
           target="_blank"
           rel="noopener noreferrer"
@@ -53,6 +54,7 @@ function renderRepos() {
       </div>
     `;
 
+    card.querySelector('.lang-badge').style.backgroundColor = badgeColor;
     grid.appendChild(card);
   });
 }
